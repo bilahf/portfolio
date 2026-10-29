@@ -20,322 +20,542 @@ import { imageUrl } from './imageUrl'
  *    Label antarmuka (Overview, Features, dst) otomatis mengikuti bahasa website.
  *  - `repo` dan `demo` boleh dikosongkan (null) kalau belum ada.
  */
+
+import { imageUrl } from './imageUrl'
+
 export const projects = [
   {
-    id: 'smart-attendance',
-    title: 'Smart Attendance System', // CONTOH
+    id: 'probing-monitoring',
+    title: 'Mobile Monitoring System for Probing Operations',
     category: 'software',
     thumbnail: imageUrl(
-      'dark navy futuristic admin dashboard of a student attendance web application displayed on a laptop, cyan and electric blue accents, holographic HUD interface, clean minimal, high detail',
+      '/images/prob.jpg'
     ),
     shortDescription:
-      'A web-based attendance system that records student presence automatically and generates monthly reports for the academic staff.',
-    tech: ['React', 'Node.js', 'MySQL', 'Tailwind CSS'],
+      'A mobile monitoring system developed during an internship to support PLN probing operations through centralized customer data management, field activity monitoring, and automated data synchronization.',
+    tech: [
+      'Flutter',
+      'PHP REST API',
+      'MySQL',
+      'JWT',
+      'Google Apps Script',
+      'Google Sheets',
+      'Google Maps',
+    ],
     details: {
       overview:
-        'A web application used by lecturers to record and monitor student attendance in real time, replacing the manual paper-based process.',
+        'A mobile application developed to help field officers manage probing activities and customer information. The system connects a Flutter frontend with a PHP REST API and MySQL database, with additional integration for Google Sheets synchronization.',
       problem:
-        'Manual attendance recap took hours every month and was prone to human error and lost records.',
+        'Customer probing data collected through manual processes can be difficult to monitor, consolidate, and recap. Field teams need a more centralized way to manage customer records and track the results of probing activities.',
       objectives: [
-        'Digitalise the attendance recording process',
-        'Generate monthly recap reports automatically',
-        'Provide a simple dashboard for lecturers and staff',
+        'Centralize customer probing data in one application',
+        'Simplify field activity monitoring and customer status updates',
+        'Reduce repetitive manual data entry and recap work',
+        'Support operational reporting through spreadsheet synchronization',
       ],
       features: [
-        'Login for lecturers and administrators',
-        'One-tap attendance recording per class session',
-        'Automatic monthly recap and export to spreadsheet',
-        'Attendance percentage alerts for each student',
+        'Customer data creation, viewing, updating, and management',
+        'JWT-based authentication',
+        'Customer status tracking for willing, unwilling, and not-found results',
+        'Monitoring dashboard for probing activities',
+        'Google Maps integration for location support',
+        'Activity history and status tracking',
+        'Automated synchronization with Google Sheets',
       ],
-      role: 'Full-stack developer — designed the database, built the REST API and the user interface.',
+      role:
+        'Mobile application developer intern — developed the Flutter interface, integrated the PHP REST API, and supported customer data management and synchronization workflows.',
       process: [
-        'Requirement gathering with two lecturers',
-        'Database and API design',
-        'Frontend implementation with React and Tailwind CSS',
-        'User testing and bug fixing',
+        'Identifying the operational needs of the probing process',
+        'Designing mobile screens and customer data workflows',
+        'Connecting the Flutter application to the PHP REST API',
+        'Integrating application data with MySQL',
+        'Implementing customer status tracking and map functionality',
+        'Configuring Google Apps Script and Google Sheets synchronization',
+        'Testing application workflows and data consistency',
       ],
       screenshots: [
         {
           src: imageUrl(
-            'attendance recap table inside a dark themed web dashboard with cyan highlight bars and charts, minimal UI, screenshot style',
+            'mobile application dashboard for field customer probing operations, customer statistics cards, blue and white enterprise UI, realistic Android app screenshot'
           ),
-          caption: 'Monthly recap dashboard',
+          caption: 'Probing monitoring dashboard',
         },
         {
           src: imageUrl(
-            'mobile view of an attendance mobile responsive web page, dark navy theme, cyan buttons, clean list of students, screenshot style',
+            'Android mobile application displaying a searchable list of customer records with willing unwilling and not found status labels, clean blue and white interface'
           ),
-          caption: 'Responsive view on mobile',
+          caption: 'Customer records and probing status',
+        },
+        {
+          src: imageUrl(
+            'mobile field monitoring application showing customer location information on an integrated map, clean enterprise interface, realistic Android screenshot'
+          ),
+          caption: 'Customer location support',
         },
       ],
       challenges: [
         {
-          challenge: 'Two classes could be recorded at the same time and the data overwrote each other.',
+          challenge:
+            'Keeping customer records consistent between the mobile application, backend database, and spreadsheet recap.',
           solution:
-            'Added a unique session identifier for every class meeting so each record is stored independently.',
+            'Used a PHP REST API connected to MySQL for application data and configured Google Apps Script to synchronize relevant records with Google Sheets.',
+        },
+        {
+          challenge:
+            'Making field probing results easier to identify and monitor.',
+          solution:
+            'Organized customer records using distinct probing status categories and provided a centralized interface for monitoring activities.',
         },
       ],
       results: [
-        'Monthly recap time reduced from several hours to under five minutes',
-        'Used by one study programme during the pilot period',
+        'Provided a centralized mobile interface for managing more than 500 customer records.',
+        'Supported probing activity monitoring across four ULP areas in Gresik.',
+        'Reduced dependence on separate manual forms and spreadsheet recaps.',
+        'Connected mobile data management with automated Google Sheets synchronization.',
       ],
-      repo: null, // TODO: isi link GitHub bila ada, contoh: 'https://github.com/username/repo'
-      demo: null, // TODO: isi link live demo bila ada
+      repo: 'https://github.com/bilahf/probing',
+      demo: null,
     },
   },
+
   {
-    id: 'document-summarizer',
-    title: 'AI Document Summarizer', // CONTOH
-    category: 'ai',
-    thumbnail: imageUrl(
-      'dark futuristic user interface that summarises a long document using artificial intelligence, glowing cyan neural network lines over a dark navy background, minimal tech aesthetic',
-    ),
-    shortDescription:
-      'A small tool that condenses long PDF documents into a short summary and a list of key points.',
-    tech: ['Python', 'FastAPI', 'LLM API', 'Streamlit'],
-    details: {
-      overview:
-        'A lightweight web tool that accepts a PDF, extracts the text, and returns a short summary plus bullet points of the most important information.',
-      problem:
-        'Reading dozens of pages of reports or journals took too long when only the key points were needed.',
-      objectives: [
-        'Reduce reading time for long documents',
-        'Produce consistent and easy to scan summaries',
-      ],
-      features: [
-        'PDF upload and automatic text extraction',
-        'Summary in a chosen length (short / medium)',
-        'Automatic key point extraction',
-        'Copy and download the summary as text',
-      ],
-      role: 'Solo project — built the pipeline, prompt design and the web interface.',
-      process: [
-        'Exploring text extraction libraries',
-        'Prompt engineering and output formatting',
-        'Building the interface with Streamlit',
-        'Testing with several types of documents',
-      ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'dark themed web app screen showing an uploaded PDF file and an AI generated bullet point summary, cyan accent, minimal interface, screenshot style',
-          ),
-          caption: 'Summary result page',
-        },
-      ],
-      challenges: [
-        {
-          challenge: 'The model sometimes returned a summary that was longer than the original text.',
-          solution: 'Added a length limit in the prompt and an output validation step before displaying the result.',
-        },
-      ],
-      results: ['Summaries generated in a few seconds', 'Key points accurate for structured documents'],
-      repo: null, // TODO
-      demo: null, // TODO
-    },
-  },
-  {
-    id: 'sales-analytics-dashboard',
-    title: 'Sales Analytics Dashboard', // CONTOH
-    category: 'data',
-    thumbnail: imageUrl(
-      'dark navy analytics dashboard with cyan line charts, bar charts and KPI cards, holographic data visualisation style, clean and minimal, high detail',
-    ),
-    shortDescription:
-      'An interactive dashboard that visualises sales data to help small businesses spot their best selling products.',
-    tech: ['Python', 'Pandas', 'Plotly', 'Streamlit'],
-    details: {
-      overview:
-        'A dashboard that reads a sales spreadsheet and turns it into charts: revenue trend, top products, and sales by region.',
-      problem:
-        'Shop owners kept their sales data in spreadsheets and never analysed it because making charts manually was tedious.',
-      objectives: [
-        'Turn raw sales data into easy to read visualisations',
-        'Highlight the best performing products and periods',
-      ],
-      features: [
-        'Interactive date range filter',
-        'Revenue and transaction trend chart',
-        'Top 10 products and category breakdown',
-        'Automatic data cleaning for common spreadsheet issues',
-      ],
-      role: 'Solo project — data cleaning, analysis and visualisation.',
-      process: [
-        'Data cleaning and column standardisation with Pandas',
-        'Exploratory analysis to decide which metrics mattered',
-        'Building interactive charts with Plotly',
-        'Packaging it into a shareable dashboard',
-      ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'dark data analytics dashboard with cyan and blue charts, revenue trend line graph, top products bar chart, modern minimal UI, screenshot style',
-          ),
-          caption: 'Main dashboard view',
-        },
-      ],
-      challenges: [
-        {
-          challenge: 'The source spreadsheets had inconsistent date formats and duplicate rows.',
-          solution: 'Wrote a cleaning step that normalises dates and removes duplicates before analysis.',
-        },
-      ],
-      results: ['Insights available in seconds instead of manual spreadsheet work'],
-      repo: null, // TODO
-      demo: null, // TODO
-    },
-  },
-  {
-    id: 'smart-room-monitor',
-    title: 'Smart Room Monitor', // CONTOH
-    category: 'iot',
-    thumbnail: imageUrl(
-      'ESP32 microcontroller board with temperature and humidity sensors and jumper wires on a dark desk, cyan indicator light, macro photography, tech aesthetic',
-    ),
-    shortDescription:
-      'An IoT device that monitors room temperature and humidity and sends the reading to a web dashboard.',
-    tech: ['ESP32', 'Arduino', 'MQTT', 'React'],
-    details: {
-      overview:
-        'A sensor node built on an ESP32 that measures temperature and humidity every minute and publishes the reading to a dashboard through MQTT.',
-      problem:
-        'Lab rooms had no air conditioning monitoring, so equipment sometimes overheated without anyone noticing.',
-      objectives: [
-        'Monitor room conditions continuously',
-        'Alert when the temperature passes a safe threshold',
-      ],
-      features: [
-        'Temperature and humidity reading every minute',
-        'Wireless data transmission over MQTT',
-        'Live chart on a web dashboard',
-        'Threshold alert indicator',
-      ],
-      role: 'Hardware and firmware — wiring, sensor calibration and the MQTT publishing code.',
-      process: [
-        'Selecting and testing the sensors',
-        'Writing the ESP32 firmware',
-        'Calibrating the readings against a reference thermometer',
-        'Connecting the data to the dashboard',
-      ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'prototype wiring of an ESP32 with temperature sensor on a breadboard, dark background with cyan lighting, close up electronics photography',
-          ),
-          caption: 'Prototype wiring',
-        },
-      ],
-      challenges: [
-        {
-          challenge: 'Sensor readings drifted after running for a few days.',
-          solution: 'Added a simple averaging filter and a periodic recalibration on startup.',
-        },
-      ],
-      results: ['Stable continuous monitoring during the testing period'],
-      repo: null, // TODO
-      demo: null, // TODO
-    },
-  },
-  {
-    id: 'campus-event-portal',
-    title: 'Campus Event Portal', // CONTOH
+    id: 'daily-news-mobile',
+    title: 'Daily News Mobile Application',
     category: 'software',
     thumbnail: imageUrl(
-      'dark navy website interface of a campus event listing portal with event cards, cyan highlights, minimal futuristic web design, screenshot style',
+      '/images/news.png'
     ),
     shortDescription:
-      'A simple portal where student organisations publish events and students register online.',
-    tech: ['Laravel', 'Blade', 'Tailwind CSS', 'MySQL'],
+      'An Android news application developed during the Bank Mandiri Mobile Apps Developer Project-Based Internship Program, using NewsAPI to retrieve and display news articles.',
+    tech: [
+      'Kotlin',
+      'Jetpack Compose',
+      'Retrofit',
+      'REST API',
+      'NewsAPI',
+      'Kotlin Coroutines',
+      'Android Studio',
+    ],
     details: {
       overview:
-        'A web portal for campus events: organisers create an event page, students browse and register, and each organiser sees the participant list.',
+        'A native Android application that retrieves news articles from NewsAPI and presents them in a mobile-friendly interface. The application demonstrates modern Android UI development and REST API integration using Kotlin.',
       problem:
-        'Event registration was done through chat groups, so participant data was scattered and hard to recap.',
+        'Accessing current news through a mobile application requires reliable API communication and a clear interface for browsing article headlines and details.',
       objectives: [
-        'Centralise campus event information',
-        'Make participant recap automatic for organisers',
+        'Build a native Android application using Kotlin',
+        'Retrieve news articles from an external REST API',
+        'Present news content in a clear and responsive mobile interface',
+        'Practice modern Android development with Jetpack Compose',
       ],
       features: [
-        'Event creation with poster and schedule',
-        'Online registration form',
-        'Participant list with export',
-        'Event status (open / closed / finished)',
+        'News headline listing',
+        'News article browsing',
+        'NewsAPI integration',
+        'Asynchronous data loading with Kotlin Coroutines',
+        'REST API requests using Retrofit',
+        'Scrollable news feed',
+        'Pagination or additional article loading where supported',
       ],
-      role: 'Backend developer — database design, CRUD modules and the registration flow.',
+      role:
+        'Mobile developer trainee — developed the Android application interface, connected the application to NewsAPI, and implemented the news data loading workflow.',
       process: [
-        'Modelling the database',
-        'Building the CRUD modules',
-        'Implementing the registration and export flow',
-        'Testing with one student organisation',
+        'Setting up the Android project in Android Studio',
+        'Designing the user interface with Jetpack Compose',
+        'Configuring Retrofit for REST API requests',
+        'Mapping API responses into application data models',
+        'Loading news data asynchronously with Kotlin Coroutines',
+        'Implementing the article listing and browsing interface',
+        'Testing API responses and mobile screen behavior',
       ],
       screenshots: [
         {
           src: imageUrl(
-            'dark themed event management page with a list of campus events and a participant table, cyan accent colour, clean interface, screenshot style',
+            'Android news application home screen with top headlines, editorial thumbnails, article titles, white background and clean modern Jetpack Compose UI'
           ),
-          caption: 'Event management page',
+          caption: 'Daily news home screen',
+        },
+        {
+          src: imageUrl(
+            'native Android news app showing a vertically scrollable list of news articles with thumbnails, headlines and short descriptions, minimalist interface'
+          ),
+          caption: 'News article listing',
         },
       ],
       challenges: [
         {
-          challenge: 'Duplicate registrations happened when students double clicked the submit button.',
-          solution: 'Enforced a unique constraint on student number and event, and disabled the button after the first click.',
+          challenge:
+            'Handling API responses and displaying news data without blocking the mobile interface.',
+          solution:
+            'Used Retrofit for API communication and Kotlin Coroutines for asynchronous data loading.',
+        },
+        {
+          challenge:
+            'Presenting multiple news articles in a readable mobile layout.',
+          solution:
+            'Organized article information into reusable Jetpack Compose UI components and a scrollable list.',
         },
       ],
-      results: ['Participant recaps became automatic instead of manual chat message counting'],
-      repo: null, // TODO
-      demo: null, // TODO
+      results: [
+        'Built a native Android application that retrieves news data from NewsAPI.',
+        'Applied Kotlin and Jetpack Compose for mobile interface development.',
+        'Practiced REST API integration and asynchronous data handling.',
+      ],
+      repo: null,
+      demo: null,
     },
   },
+
   {
-    id: 'sentiment-analysis',
-    title: 'Product Review Sentiment Analysis', // CONTOH
+    id: 'ai-workflow-automation',
+    title: 'AI Workflow Automation & Intelligent Data Processing',
     category: 'ai',
     thumbnail: imageUrl(
-      'dark futuristic interface showing text classification results with positive and negative sentiment labels, cyan glow, minimal data science aesthetic',
+      '/images/ai.jpg'
     ),
     shortDescription:
-      'A text classification model that labels product reviews as positive or negative and shows the most common complaints.',
-    tech: ['Python', 'Scikit-learn', 'NLTK', 'Jupyter'],
+      'A collection of AI-powered automation workflows built with n8n to streamline data extraction, transformation, processing, and storage through API integrations and AI services.',
+    tech: [
+      'n8n',
+      'AI Agents',
+      'OpenRouter',
+      'API Integration',
+      'Google Sheets',
+      'Workflow Automation',
+    ],
     details: {
       overview:
-        'A natural language processing experiment that classifies product reviews and summarises the words that appear most often in negative reviews.',
+        'A collection of automation workflows that connect external services, AI models, and data-processing steps. The workflows use n8n to orchestrate multi-step tasks, process structured information, and deliver results to connected services.',
       problem:
-        'Reading thousands of reviews manually to find recurring complaints was not practical.',
+        'Repeating information-processing tasks manually can consume time and make workflows harder to maintain. Tasks involving several services also require a consistent way to transfer and process data between steps.',
       objectives: [
-        'Build a review classifier with a clear accuracy baseline',
-        'Identify the most frequent complaint topics',
+        'Automate repetitive data-processing tasks',
+        'Connect AI models with external APIs and productivity tools',
+        'Organize multi-step processes into reusable workflows',
+        'Improve consistency in data transformation and output handling',
       ],
       features: [
-        'Text pre-processing (cleaning, stopword removal, stemming)',
-        'TF-IDF feature extraction',
-        'Classification with a Naive Bayes and SVM comparison',
-        'Word cloud of negative reviews',
+        'AI-assisted information processing',
+        'Integration with external APIs through HTTP requests',
+        'Multi-step workflow orchestration',
+        'Conditional branching and looping',
+        'Data extraction and transformation',
+        'AI model access through OpenRouter',
+        'Google Sheets integration',
+        'Automated output delivery between workflow steps',
       ],
-      role: 'Solo project — data collection, model training and evaluation.',
+      role:
+        'Workflow developer — designed automation flows, configured API integrations, connected AI services, and organized data-processing steps.',
       process: [
-        'Collecting and labelling the review dataset',
-        'Pre-processing and feature extraction',
-        'Training and comparing two models',
-        'Evaluating with a confusion matrix',
+        'Identifying repetitive tasks suitable for automation',
+        'Designing workflow nodes and data flow in n8n',
+        'Configuring API credentials and HTTP requests',
+        'Connecting AI services through OpenRouter',
+        'Adding conditional logic and data transformation',
+        'Integrating workflow outputs with Google Sheets where required',
+        'Testing workflow execution and handling unsuccessful requests',
       ],
       screenshots: [
         {
           src: imageUrl(
-            'confusion matrix and word cloud on a dark background, cyan and blue colours, data science notebook visual, minimal clean layout',
+            'n8n workflow editor with connected trigger HTTP request AI agent conditional logic and Google Sheets nodes, realistic workflow automation interface, readable node connections'
           ),
-          caption: 'Model evaluation result',
+          caption: 'AI workflow automation',
+        },
+        {
+          src: imageUrl(
+            'workflow execution results showing structured JSON data passing through connected automation nodes, clean developer tool interface, realistic software screenshot'
+          ),
+          caption: 'Data processing workflow',
         },
       ],
       challenges: [
         {
-          challenge: 'The dataset was imbalanced with far more positive than negative reviews.',
-          solution: 'Applied class weighting and evaluated with precision and recall instead of accuracy alone.',
+          challenge:
+            'Passing data between multiple services while keeping the output structure consistent.',
+          solution:
+            'Organized workflow steps around explicit data transformations and checked the output of individual nodes during testing.',
+        },
+        {
+          challenge:
+            'Handling different API responses and potential failures during workflow execution.',
+          solution:
+            'Separated processing steps and added conditional checks where appropriate to make workflow behavior easier to inspect and maintain.',
         },
       ],
-      results: ['Baseline classifier built and evaluated with documented metrics'],
-      repo: null, // TODO
-      demo: null, // TODO
+      results: [
+        'Created reusable workflows for multi-step automation tasks.',
+        'Connected AI services with external APIs and productivity tools.',
+        'Reduced the need for repeated manual processing in supported workflows.',
+      ],
+      repo: 'https://github.com/bilahf/workflows',
+      demo: null,
+    },
+  },
+
+  {
+    id: 'industrial-energy-forecasting',
+    title: 'Industrial Energy Consumption Forecasting System',
+    category: 'data',
+    thumbnail: imageUrl(
+      '/images/listr.jpg'
+    ),
+    shortDescription:
+      'A web-based forecasting system developed as a final thesis project to analyze and predict industrial electricity consumption using historical PLN data and Fuzzy Time Series Cheng.',
+    tech: [
+      'Laravel',
+      'RStudio',
+      'Microsoft Excel',
+      'Fuzzy Time Series Cheng',
+      'Statistical Analysis',
+      'Data Forecasting',
+      'MySQL',
+    ],
+    details: {
+      overview:
+        'A web-based application for analyzing historical electricity consumption and presenting forecasting results using the Fuzzy Time Series Cheng method. The system combines statistical processing with a Laravel interface for viewing historical data and forecast outputs.',
+      problem:
+        'Historical electricity consumption data needs to be analyzed systematically to identify usage patterns and generate forecasts that can support planning and evaluation.',
+      objectives: [
+        'Prepare and analyze historical electricity consumption data',
+        'Implement the Fuzzy Time Series Cheng forecasting method',
+        'Evaluate forecast accuracy using error metrics',
+        'Present historical data and forecast results through a web application',
+      ],
+      features: [
+        'Historical electricity consumption data management',
+        'Data preparation and interval calculation',
+        'Fuzzy Time Series Cheng forecasting calculations',
+        'Forecast result presentation',
+        'Actual versus forecast comparison',
+        'Forecast error evaluation',
+        'Web-based data monitoring',
+      ],
+      role:
+        'Researcher and web developer — prepared the historical dataset, implemented forecasting calculations, evaluated model performance, and developed the Laravel application.',
+      process: [
+        'Collecting historical electricity consumption records',
+        'Preparing and checking the dataset using Microsoft Excel',
+        'Analyzing the data and applying the forecasting method',
+        'Implementing forecasting calculations and evaluation',
+        'Developing the web application with Laravel and MySQL',
+        'Displaying historical data and forecasting results',
+        'Comparing forecast outputs against actual consumption values',
+      ],
+      screenshots: [
+        {
+          src: imageUrl(
+            'Laravel electricity consumption forecasting dashboard with monthly industrial energy usage table and statistical summary cards, clean blue and white web interface'
+          ),
+          caption: 'Electricity consumption dashboard',
+        },
+        {
+          src: imageUrl(
+            'time series forecasting result page with historical electricity consumption and forecast line chart, actual versus predicted values and error metrics, professional analytics interface'
+          ),
+          caption: 'Forecasting results and evaluation',
+        },
+      ],
+      challenges: [
+        {
+          challenge:
+            'Preparing historical data in a consistent format before applying the forecasting method.',
+          solution:
+            'Organized the historical records and performed data preparation before carrying out the forecasting calculations.',
+        },
+        {
+          challenge:
+            'Evaluating the forecast results to understand the difference between predicted and actual consumption.',
+          solution:
+            'Compared forecast values with actual observations and used error metrics, including MAPE, to assess model performance.',
+        },
+      ],
+      results: [
+        'Implemented a web-based electricity consumption forecasting system.',
+        'Applied the Fuzzy Time Series Cheng method to historical consumption data.',
+        'Achieved a MAPE of 5.78% for the selected 48-period configuration in the thesis analysis.',
+        'Recorded an absolute percentage error of 10.51% for the June 2025 forecast comparison.',
+      ],
+      repo: 'https://github.com/bilahf/forecast',
+      demo: null,
+    },
+  },
+
+  {
+    id: 'mortgage-profitability-dashboard',
+    title: 'Mortgage Trading & Profitability Analysis Dashboard',
+    category: 'data',
+    thumbnail: imageUrl(
+      '/images/mortgage.jpg'
+    ),
+    shortDescription:
+      'An interactive Power BI dashboard designed to analyze mortgage trading performance, pricing drivers, revenue, and profitability through data transformation and visualization.',
+    tech: [
+      'Power BI',
+      'Power Query',
+      'DAX',
+      'Data Cleaning',
+      'Data Visualization',
+      'Business Intelligence',
+    ],
+    details: {
+      overview:
+        'An analytical dashboard concept focused on mortgage trading performance and profitability. It organizes business data into interactive visualizations to make revenue, gross profit, margin, and pricing-related metrics easier to explore.',
+      problem:
+        'Business data stored in tabular formats can be difficult to interpret quickly when performance indicators and pricing factors are not presented in a unified analytical view.',
+      objectives: [
+        'Transform raw business data into an analysis-ready dataset',
+        'Present key profitability metrics in a visual dashboard',
+        'Explore pricing drivers and business performance patterns',
+        'Make business indicators easier to compare and interpret',
+      ],
+      features: [
+        'Data cleaning and transformation with Power Query',
+        'Revenue and trading performance analysis',
+        'Gross profit analysis',
+        'Profit margin calculations using DAX',
+        'Pricing driver analysis',
+        'Interactive charts and KPI cards',
+        'Business performance comparison',
+      ],
+      role:
+        'Data analyst — prepared the data, developed analytical measures, and designed visualizations to communicate business performance indicators.',
+      process: [
+        'Reviewing the available business dataset',
+        'Cleaning and transforming data in Power Query',
+        'Defining relevant revenue and profitability metrics',
+        'Creating calculated measures using DAX',
+        'Designing KPI cards and supporting visualizations',
+        'Organizing dashboard elements into a clear report layout',
+        'Checking the consistency of displayed metrics',
+      ],
+      screenshots: [
+        {
+          src: imageUrl(
+            'Power BI mortgage trading profitability report with revenue gross profit and margin KPI cards, interactive bar charts and pricing analysis, clean corporate dashboard screenshot'
+          ),
+          caption: 'Profitability overview',
+        },
+        {
+          src: imageUrl(
+            'Power BI business intelligence report showing pricing driver analysis, profitability comparisons and interactive filters, professional financial analytics dashboard'
+          ),
+          caption: 'Pricing and performance analysis',
+        },
+      ],
+      challenges: [
+        {
+          challenge:
+            'Turning raw tabular data into useful indicators for business performance analysis.',
+          solution:
+            'Used Power Query to organize the dataset and DAX measures to define the key profitability metrics.',
+        },
+        {
+          challenge:
+            'Presenting several business indicators without making the dashboard difficult to read.',
+          solution:
+            'Grouped related KPIs and charts into sections so users can review overall performance and explore individual metrics.',
+        },
+      ],
+      results: [
+        'Developed a visual overview of mortgage trading and profitability indicators.',
+        'Organized revenue, gross profit, and margin metrics into a unified report.',
+        'Demonstrated data transformation, DAX calculations, and interactive dashboard design.',
+      ],
+      repo: null,
+      demo: null,
+    },
+  },
+
+  {
+    id: 'cloud-media-server',
+    title: 'Cloud Media Server Deployment',
+    category: 'cloud',
+    thumbnail: imageUrl(
+      '/images/cloud.jpg'
+    ),
+    shortDescription:
+      'A cloud deployment project using Google Cloud Compute Engine and Cloud Storage to demonstrate virtual machine hosting, web server configuration, and cloud-based media delivery.',
+    tech: [
+      'Google Cloud',
+      'Compute Engine',
+      'Cloud Storage',
+      'Linux',
+      'Apache HTTP Server',
+      'HTML',
+    ],
+    details: {
+      overview:
+        'A cloud infrastructure project demonstrating how a virtual machine and object storage can be used together to host a web server and deliver media resources. The project covers basic Linux server administration and cloud service configuration.',
+      problem:
+        'Hosting a web application and its media assets requires an infrastructure setup that separates server processing from file storage and makes resources accessible through the web.',
+      objectives: [
+        'Deploy a virtual machine on Google Cloud Compute Engine',
+        'Configure a Linux environment and Apache web server',
+        'Use Cloud Storage to store media assets',
+        'Understand the relationship between compute resources and object storage',
+      ],
+      features: [
+        'Cloud virtual machine provisioning',
+        'Linux environment configuration',
+        'Apache HTTP Server setup',
+        'Cloud Storage integration',
+        'Web page deployment',
+        'Media asset hosting and URL access',
+        'Separation of compute and storage resources',
+      ],
+      role:
+        'Cloud deployment practitioner — configured the cloud environment, prepared the server, deployed web resources, and explored object storage integration.',
+      process: [
+        'Preparing the Google Cloud project and required services',
+        'Provisioning a Compute Engine virtual machine',
+        'Configuring the Linux server environment',
+        'Installing and configuring Apache HTTP Server',
+        'Preparing the web page and media resources',
+        'Configuring Cloud Storage for media assets',
+        'Testing access to the deployed web page and media URLs',
+      ],
+      screenshots: [
+        {
+          src: imageUrl(
+            'Google Cloud Console Compute Engine virtual machine details page showing a running Linux instance, professional cloud infrastructure interface'
+          ),
+          caption: 'Compute Engine configuration',
+        },
+        {
+          src: imageUrl(
+            'simple deployed media website hosted on an Apache Linux server with image and video content, clean browser view and minimal web design'
+          ),
+          caption: 'Deployed media web page',
+        },
+        {
+          src: imageUrl(
+            'Google Cloud Storage bucket interface showing organized media files and object details, realistic cloud console screenshot'
+          ),
+          caption: 'Cloud Storage media assets',
+        },
+      ],
+      challenges: [
+        {
+          challenge:
+            'Configuring the virtual machine and web server so the deployed page can be accessed correctly.',
+          solution:
+            'Checked the server configuration, Apache service status, and relevant network access settings during deployment testing.',
+        },
+        {
+          challenge:
+            'Managing media files separately from the web server environment.',
+          solution:
+            'Used Cloud Storage as an object storage service to separate media assets from the virtual machine resources.',
+        },
+      ],
+      results: [
+        'Deployed a Linux-based web server on Google Cloud Compute Engine.',
+        'Configured Apache HTTP Server to serve web content.',
+        'Explored Cloud Storage for media asset hosting.',
+        'Practiced basic cloud infrastructure deployment and resource integration.',
+      ],
+      repo: null,
+      demo: null,
     },
   },
 ]
