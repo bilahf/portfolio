@@ -14,23 +14,29 @@ import { imageUrl } from './imageUrl'
 export const awards = [
   {
     id: 'award-1',
-    title: 'Sample Award Title', // CONTOH - ganti dengan penghargaan asli
-    organization: 'Sample Organization', // CONTOH
-    year: '2025', // CONTOH
+    title: 'Best Graduate - Informatics Engineering Program',
+    organization: 'Universitas Muhammadiyah Gresik',
+    year: '2026',
     description:
-      'Short description of the achievement and what was done to earn it. Replace this text with your own.',
-    image: imageUrl(
-      'a trophy and medal arrangement on a dark surface with cyan rim lighting, minimal elegant award photography, high detail',
-      'landscape_4_3',
-    ),
+      'Recognized as the Best Graduate of the Informatics Engineering Program for outstanding academic performance.',
+    image: '/images/pgm.png',
   },
   {
     id: 'award-2',
-    title: 'Sample Achievement Title', // CONTOH
-    organization: 'Sample Organization', // CONTOH
-    year: '2024', // CONTOH
+    title: 'Best Graduate - Faculty of Engineering',
+    organization: 'Universitas Muhammadiyah Gresik',
+    year: '2026',
     description:
-      'Short description of the achievement. Replace this text with your own.',
-    image: null, // boleh null bila tidak ada gambar
+      'Recognized as one of the Best Graduates of the Faculty of Engineering for academic excellence.',
+    image: '/images/piagam.jpeg',
   },
-]
+  {
+    id: 'award-3',
+    title: 'Top 100 - SQL Hackathon',
+    organization: 'DQLAB',
+    year: '2026',
+    description:
+      'Ranked among the Top 100 participants in a SQL Hackathon focused on sales analysis and business insights.',
+    image: '/images/srtf.png',
+  },
+];
