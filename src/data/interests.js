@@ -13,8 +13,8 @@
  */
 export const interests = [
   { en: 'Software Development', id: 'Pengembangan Perangkat Lunak' },
+  { en: 'IoT & Robotics', id: 'IoT & Robotika' },
   { en: 'AI & Automation', id: 'AI & Otomasi' },
   { en: 'Data Analytics', id: 'Analitik Data' },
   { en: 'Web Development', id: 'Pengembangan Web' },
-  { en: 'IoT & Robotics', id: 'IoT & Robotika' },
 ]

@@ -26,6 +26,6 @@ export const education = [
     institution: 'Universitas Muhammadiyah Gresik',
     period: '2022 – 2026',
     gpa: '3.92 / 4.00',
-    logo: '/images/education/university.png', // TODO: ganti dengan logo kampus asli
+    logo: '/images/education/umg.png', // TODO: ganti dengan logo kampus asli
   },
 ]

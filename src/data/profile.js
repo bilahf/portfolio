@@ -15,16 +15,16 @@ export const profile = {
   photo: '/nab1.png',
 
   // Inisial untuk fallback foto (dipakai jika profile.png belum ada)
-  initials: 'NF',
+  initials: 'N.F.',
 
   // GANTI: alamat email aktif Anda
-  email: 'nabilah.fitriani@example.com', // TODO: ganti dengan email asli
+  email: 'nabilah.fitriani@gmail.com', // TODO: ganti dengan email asli
 
   // GANTI: URL profil GitHub Anda
-  github: 'https://github.com/username', // TODO: ganti dengan GitHub asli
+  github: 'https://github.com/bilahf', // TODO: ganti dengan GitHub asli
 
   // GANTI: URL profil LinkedIn Anda
-  linkedin: 'https://www.linkedin.com/in/username', // TODO: ganti dengan LinkedIn asli
+  linkedin: 'https://www.linkedin.com/in/bilahf', // TODO: ganti dengan LinkedIn asli
 
   // GANTI: lokasi Anda
   location: 'Kec.Manyar, Kab.Gresik, East Java, Indonesia', // TODO: sesuaikan
