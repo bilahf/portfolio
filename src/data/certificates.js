@@ -25,7 +25,80 @@ import { imageUrl } from './imageUrl'
  * Link verifikasi sertifikat atau null.
  */
 
+
+/**
+ * ============================================================
+ * DATA CERTIFICATES
+ * ============================================================
+ *
+ * name        : Nama sertifikat
+ * issuer      : Organisasi penerbit
+ * date        : Tanggal penerbitan
+ * description  : Penjelasan singkat sertifikat
+ * tags        : Skills / technologies learned
+ * image       : Path gambar sertifikat
+ * credentialUrl: Link verifikasi sertifikat
+ */
+
 export const certificates = [
+  {
+    id: 'cert-servicenow-flows',
+
+    name: 'ServiceNow Micro-Certification - Flows',
+
+    issuer: 'ServiceNow',
+
+    date: '2026',
+
+    description: {
+      en: 'Learned workflow automation using ServiceNow Flow Designer, including flow logic, process automation, and no-code workflow development.',
+      id: 'Mempelajari otomatisasi workflow menggunakan ServiceNow Flow Designer, termasuk flow logic, process automation, dan pengembangan workflow tanpa coding.',
+    },
+
+    tags: [
+      'ServiceNow',
+      'Flow Designer',
+      'Workflow Automation',
+      'Process Automation',
+      'No-Code Development',
+    ],
+
+    image: '/images/flow.png',
+
+    credentialUrl:
+      'https://www.credly.com/badges/1912e5bc-a727-4060-8c2f-79c1d76206bc/linked_in_profile',
+  },
+
+  {
+    id: 'cert-vibe-coding-ai-agent',
+
+    name: 'Vibe Coding and AI Agent',
+
+    issuer: 'Leverify',
+
+    date: 'March – May 2026',
+
+    description: {
+      en: 'Explored AI agent development and workflow automation using AI tools, prompt engineering, and integrations with automation platforms.',
+      id: 'Mempelajari pengembangan AI agent dan otomatisasi workflow menggunakan AI tools, prompt engineering, serta integrasi dengan platform otomatisasi.',
+    },
+
+    tags: [
+      'AI Agent',
+      'AI Automation',
+      'Prompt Engineering',
+      'n8n',
+      'Zapier',
+      'Make.com',
+      'AI Integration',
+    ],
+
+    image: '/images/aivibe.png',
+
+    credentialUrl:
+      'https://drive.google.com/file/d/1zwBbGUJitF--k-JxYWPY2yhJiU1zrA6z/view?usp=drive_link',
+  },
+
   {
     id: 'cert-laravel',
 
@@ -33,141 +106,141 @@ export const certificates = [
 
     issuer: 'Sanbercode',
 
-    date: '2025',
+    date: 'September 2024',
 
     description: {
-      en: 'Learned Laravel web development, including MVC, database migrations, Eloquent ORM, CRUD operations, and project deployment.',
-      id: 'Mempelajari pengembangan web menggunakan Laravel, meliputi MVC, database migration, Eloquent ORM, CRUD, dan deployment project.',
+      en: 'Learned Laravel web development, including MVC architecture, database management, REST API development, CRUD operations, and authentication.',
+      id: 'Mempelajari pengembangan web menggunakan Laravel, meliputi MVC architecture, pengelolaan database, REST API, CRUD, dan authentication.',
     },
 
     tags: [
       'Laravel',
       'PHP',
+      'MVC',
+      'REST API',
       'MySQL',
       'CRUD',
-      'Git',
+      'Authentication',
     ],
 
-    image: imageUrl(
-      'professional Laravel web development certificate, landscape format, clean modern certificate design',
-      'landscape_4_3',
-    ),
+    image: '/images/laravel.png',
 
-    credentialUrl: null,
+    credentialUrl:
+      'https://sanbercode.com/certificate/in/4ed86d9c-7aeb-4114-bd31-66ac921d6d57',
   },
 
   {
-    id: 'cert-mobile-developer',
+    id: 'cert-vibe-coding',
 
-    name: 'Mobile Developer Project-Based Internship',
+    name: 'Vibe Coding',
 
-    issuer: 'Rakamin x Bank Mandiri',
+    issuer: 'NDA Digital Skills',
 
-    date: 'August – September 2026',
+    date: 'July 2026',
 
     description: {
-      en: 'Completed a project-based internship focused on mobile development, API integration, version control, and iOS development fundamentals.',
-      id: 'Mengikuti program internship berbasis proyek dengan fokus pada mobile development, integrasi API, version control, dan dasar pengembangan iOS.',
+      en: 'Explored AI-assisted web and mobile development using AI-powered development tools, including WordPress, Kimi AI, and Lovable.',
+      id: 'Mempelajari pengembangan web dan mobile berbantuan AI menggunakan AI-powered development tools, termasuk WordPress, Kimi AI, dan Lovable.',
     },
 
     tags: [
+      'AI-Assisted Development',
+      'Web Development',
       'Mobile Development',
-      'API',
-      'GitLab',
-      'iOS',
+      'WordPress',
+      'Kimi AI',
+      'Lovable',
     ],
 
-    image: imageUrl(
-      'professional mobile developer internship certificate, landscape format, clean modern certificate design',
-      'landscape_4_3',
-    ),
+    image: '/images/vibe.png',
 
-    credentialUrl: null,
+    credentialUrl:
+      'https://drive.google.com/file/d/1BSw9rsF2FC6e1DI3TKOLDQQ1s_M5xRj1/view?usp=drive_link',
   },
 
   {
-    id: 'cert-python',
+    id: 'cert-asean-data-science',
 
-    name: 'Programming Essentials in Python',
+    name: 'ASEAN Data Science Explorers 2026: SAP Analytics Cloud',
 
-    issuer: 'Cisco Networking Academy',
+    issuer: 'ASEAN Foundation & SAP',
 
-    date: '2025',
+    date: 'August 2026',
 
     description: {
-      en: 'Studied Python programming fundamentals, including variables, data types, conditional statements, loops, functions, and basic problem-solving.',
-      id: 'Mempelajari dasar pemrograman Python, termasuk variabel, tipe data, percabangan, perulangan, fungsi, dan pemecahan masalah dasar.',
+      en: 'Learned data analysis and business intelligence using SAP Analytics Cloud, including data modeling, visualization, time-series forecasting, and ad-hoc analysis.',
+      id: 'Mempelajari analisis data dan business intelligence menggunakan SAP Analytics Cloud, meliputi data modeling, visualisasi, time-series forecasting, dan ad-hoc analysis.',
     },
 
     tags: [
-      'Python',
-      'Programming',
-      'OOP',
-      'Problem Solving',
-    ],
-
-    image: imageUrl(
-      'professional Python programming certificate, landscape format, clean modern certificate design',
-      'landscape_4_3',
-    ),
-
-    credentialUrl: null,
-  },
-
-  {
-    id: 'cert-sql',
-
-    name: 'Intermediate SQL',
-
-    issuer: 'DataCamp',
-
-    date: '2026',
-
-    description: {
-      en: 'Practiced SQL queries for data analysis, including filtering, aggregation, joins, subqueries, and working with relational databases.',
-      id: 'Mempelajari SQL untuk analisis data, meliputi filtering, aggregation, joins, subquery, dan pengolahan database relasional.',
-    },
-
-    tags: [
-      'SQL',
-      'Database',
+      'SAP Analytics Cloud',
+      'Data Modeling',
+      'Data Visualization',
+      'Time-Series Forecasting',
+      'Business Intelligence',
       'Data Analysis',
-      'Query',
     ],
 
-    image: imageUrl(
-      'professional SQL data analysis certificate, landscape format, clean modern certificate design',
-      'landscape_4_3',
-    ),
+    image: '/images/asean.png',
 
-    credentialUrl: null,
+    credentialUrl:
+      'https://drive.google.com/file/d/xxxxxx/view?usp=drive_link',
   },
 
   {
-    id: 'cert-chinese',
+    id: 'cert-chinese-hsk1',
 
     name: 'Chinese for HSK 1',
 
-    issuer: 'Peking University',
+    issuer: 'Coursera',
 
     date: 'February 2026',
 
     description: {
-      en: 'Learned basic Mandarin vocabulary, pronunciation, greetings, and simple expressions for everyday communication.',
-      id: 'Mempelajari kosakata dasar Mandarin, pelafalan, salam, dan ungkapan sederhana untuk komunikasi sehari-hari.',
+      en: 'Learned basic Mandarin vocabulary, grammar, pronunciation, and simple conversations for everyday communication at the HSK 1 level.',
+      id: 'Mempelajari kosakata dasar Mandarin, grammar, pelafalan, dan percakapan sederhana untuk komunikasi sehari-hari pada tingkat HSK 1.',
     },
 
     tags: [
-      'Chinese',
+      'Mandarin',
       'HSK 1',
-      'Language Learning',
+      'Basic Vocabulary',
+      'Grammar',
+      'Conversation',
     ],
 
-    image: imageUrl(
-      'professional Chinese language course certificate, landscape format, clean modern certificate design',
-      'landscape_4_3',
-    ),
+    image: '/images/china.png',
 
-    credentialUrl: null,
+    credentialUrl:
+      'https://coursera.org/share/b3a2efaaa782be1dd273b7de9b459cf2',
+  },
+
+  {
+    id: 'cert-exploratory-data-analysis',
+
+    name: 'Exploratory Data Analysis in Python',
+
+    issuer: 'DataCamp',
+
+    date: 'February 2026',
+
+    description: {
+      en: 'Learned exploratory data analysis using Python, including data cleaning, Pandas, statistical analysis, and data visualization to understand datasets.',
+      id: 'Mempelajari exploratory data analysis menggunakan Python, meliputi data cleaning, Pandas, analisis statistik, dan visualisasi data untuk memahami dataset.',
+    },
+
+    tags: [
+      'Python',
+      'Pandas',
+      'Data Analysis',
+      'Data Cleaning',
+      'Data Visualization',
+      'Statistics',
+    ],
+
+    image: '/images/python.png',
+
+    credentialUrl:
+      'https://drive.google.com/file/d/1QM0Wx5Nz9yqfdLEObx46WhyElto1_j6Y/view?usp=drive_link',
   },
 ]
