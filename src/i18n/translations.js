@@ -63,7 +63,7 @@ export const translations = {
       subtitle: 'Projects, certificates, awards and the technologies I work with.',
       tabs: {
         projects: 'Projects',
-        certificates: 'Certificates',
+        certificates: 'Courses & Certificates',
         awards: 'Awards',
         techStack: 'Tech Stack',
       },
