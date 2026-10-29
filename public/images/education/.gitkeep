@@ -1,0 +1,3 @@
+# Folder untuk logo kampus/sekolah.
+# Simpan file logo di sini, contoh: public/images/education/umg.png
+# Lalu isi di src/data/education.js -> logo: '/images/education/umg.png'

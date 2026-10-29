@@ -1,0 +1,3 @@
+# Folder untuk logo perusahaan/organisasi.
+# Simpan file logo di sini, contoh: public/images/companies/bank-jatim.png
+# Lalu isi di src/data/experience.js -> logo: '/images/companies/bank-jatim.png'
