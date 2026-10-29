@@ -24,6 +24,90 @@ import { imageUrl } from './imageUrl'
 // import { imageUrl } from './imageUrl'
 
 export const projects = [
+  
+{
+  id: 'arduino-4dof-robotic-arm',
+  title: 'Arduino 4-DOF Robotic Arm',
+  category: 'iot',
+  thumbnail: '/images/robot.jpeg',
+  shortDescription:
+    'A 4-DOF robotic arm prototype built with Arduino and four servo motors, designed to demonstrate basic robotic movement and multi-axis positioning through servo control.',
+  tech: [
+    'Arduino',
+    'Arduino IDE',
+    'SG90 Servo Motors',
+    'Joystick Modules',
+    'Embedded Systems',
+    'PWM Control',
+  ],
+  details: {
+    overview:
+      'A small robotic arm prototype with four degrees of freedom (4-DOF), using Arduino to control multiple servo motors. The project explores basic robotic movement, joint positioning, and manual control using joystick inputs.',
+    problem:
+      'Controlling multiple joints requires coordinated servo movements and a suitable power supply to keep the robotic arm operating reliably.',
+    objectives: [
+      'Build a robotic arm prototype with four degrees of freedom',
+      'Control multiple servo motors using Arduino',
+      'Explore joint positioning through joystick input',
+      'Understand servo control, circuit wiring, and external power requirements',
+    ],
+    features: [
+      'Four-axis robotic arm movement',
+      'Individual servo motor control',
+      'Joystick-based manual movement',
+      'Arduino-based control logic',
+      'Servo position adjustment',
+      'External power supply planning for multiple servos',
+    ],
+    role:
+      'Hardware and programming developer — assembled the robotic arm circuit, configured servo connections, and developed Arduino code for controlling servo movements.',
+    process: [
+      'Preparing the Arduino board, four SG90 servo motors, and joystick modules',
+      'Connecting servo signal wires to the assigned Arduino pins',
+      'Writing the Arduino sketch to control servo positions',
+      'Mapping joystick input values to servo movement',
+      'Testing individual servo movements and joint coordination',
+      'Checking power supply requirements and common ground connections',
+      'Adjusting the control logic based on movement tests',
+    ],
+    screenshots: [
+      {
+        src: '/images/robotic-arm.jpg',
+        caption: 'Arduino 4-DOF robotic arm prototype',
+      },
+      {
+        src: '/images/robotic-arm-wiring.jpg',
+        caption: 'Servo wiring and Arduino connections',
+      },
+      {
+        src: '/images/robotic-arm-control.jpg',
+        caption: 'Joystick-based robotic arm control',
+      },
+    ],
+    challenges: [
+      {
+        challenge:
+          'Multiple servo motors could jitter or behave inconsistently when powered directly from the Arduino USB supply.',
+        solution:
+          'Investigated the power requirements and considered a separate regulated 5V supply with sufficient current capacity for the servo motors, while maintaining a common ground.',
+      },
+      {
+        challenge:
+          'Coordinating several servo movements using joystick inputs required careful pin configuration and input mapping.',
+        solution:
+          'Organized the servo control logic by joint and tested each motor individually before testing combined movements.',
+      },
+    ],
+    results: [
+      'Developed a prototype for exploring four-axis robotic arm movement.',
+      'Practiced Arduino programming and multi-servo control.',
+      'Gained practical experience with joystick input, circuit wiring, and power management.',
+    ],
+    repo: null,
+    demo: null,
+  },
+},
+
   {
     id: 'probing-monitoring',
     title: 'Mobile Monitoring System for Probing Operations',
