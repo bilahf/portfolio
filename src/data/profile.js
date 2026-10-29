@@ -15,7 +15,7 @@ export const profile = {
   photo: '/nab1.png',
 
   // Inisial untuk fallback foto (dipakai jika profile.png belum ada)
-  initials: 'N.F.',
+  initials: ' N.F',
 
   // GANTI: alamat email aktif Anda
   email: 'nabilah.fitriani@gmail.com', // TODO: ganti dengan email asli
