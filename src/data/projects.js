@@ -28,9 +28,7 @@ export const projects = [
     id: 'probing-monitoring',
     title: 'Mobile Monitoring System for Probing Operations',
     category: 'software',
-    thumbnail: imageUrl(
-      '/images/prob.jpg'
-    ),
+    thumbnail: '/images/prob.jpg',
     shortDescription:
       'A mobile monitoring system developed during an internship to support PLN probing operations through centralized customer data management, field activity monitoring, and automated data synchronization.',
     tech: [
@@ -122,9 +120,7 @@ export const projects = [
     id: 'daily-news-mobile',
     title: 'Daily News Mobile Application',
     category: 'software',
-    thumbnail: imageUrl(
-      '/images/news.png'
-    ),
+    thumbnail: '/images/news.png',
     shortDescription:
       'An Android news application developed during the Bank Mandiri Mobile Apps Developer Project-Based Internship Program, using NewsAPI to retrieve and display news articles.',
     tech: [
@@ -209,9 +205,7 @@ export const projects = [
     id: 'ai-workflow-automation',
     title: 'AI Workflow Automation & Intelligent Data Processing',
     category: 'ai',
-    thumbnail: imageUrl(
-      '/images/ai.jpg'
-    ),
+    thumbnail:'/images/ai.jpg',
     shortDescription:
       'A collection of AI-powered automation workflows built with n8n to streamline data extraction, transformation, processing, and storage through API integrations and AI services.',
     tech: [
@@ -296,9 +290,7 @@ export const projects = [
     id: 'industrial-energy-forecasting',
     title: 'Industrial Energy Consumption Forecasting System',
     category: 'data',
-    thumbnail: imageUrl(
-      '/images/listr.jpg'
-    ),
+    thumbnail:'/images/listr.jpg',
     shortDescription:
       'A web-based forecasting system developed as a final thesis project to analyze and predict industrial electricity consumption using historical PLN data and Fuzzy Time Series Cheng.',
     tech: [
@@ -384,9 +376,7 @@ export const projects = [
     id: 'mortgage-profitability-dashboard',
     title: 'Mortgage Trading & Profitability Analysis Dashboard',
     category: 'data',
-    thumbnail: imageUrl(
-      '/images/mortgage.jpg'
-    ),
+    thumbnail:'/images/mortgage.jpg',
     shortDescription:
       'An interactive Power BI dashboard designed to analyze mortgage trading performance, pricing drivers, revenue, and profitability through data transformation and visualization.',
     tech: [
@@ -470,9 +460,7 @@ export const projects = [
     id: 'cloud-media-server',
     title: 'Cloud Media Server Deployment',
     category: 'cloud',
-    thumbnail: imageUrl(
-      '/images/cloud.jpg'
-    ),
+    thumbnail:'/images/cloud.jpg',
     shortDescription:
       'A cloud deployment project using Google Cloud Compute Engine and Cloud Storage to demonstrate virtual machine hosting, web server configuration, and cloud-based media delivery.',
     tech: [
