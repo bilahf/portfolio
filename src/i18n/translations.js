@@ -193,7 +193,7 @@ export const translations = {
       subtitle: 'Proyek, sertifikat, penghargaan, dan teknologi yang saya gunakan.',
       tabs: {
         projects: 'Proyek',
-        certificates: 'Sertifikat',
+        certificates: 'Kursus & Sertifikat',
         awards: 'Penghargaan',
         techStack: 'Tech Stack',
       },
