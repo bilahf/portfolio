@@ -21,7 +21,7 @@ import { imageUrl } from './imageUrl'
  *  - `repo` dan `demo` boleh dikosongkan (null) kalau belum ada.
  */
 
-import { imageUrl } from './imageUrl'
+// import { imageUrl } from './imageUrl'
 
 export const projects = [
   {
