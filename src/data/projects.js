@@ -24,6 +24,102 @@ import { imageUrl } from './imageUrl'
 // import { imageUrl } from './imageUrl'
 
 export const projects = [
+
+  {
+  id: 'esp32-wifi-robot-car',
+  title: 'ESP32 Wi-Fi Controlled Robot Car',
+  category: 'iot',
+  thumbnail: '/images/car.jpg',
+  shortDescription:
+    'A 2WD robot car prototype built with ESP32, L298N motor driver, and an ultrasonic sensor. The car can be controlled through a web interface over Wi-Fi and supports basic obstacle detection.',
+  tech: [
+    'ESP32',
+    'Arduino IDE',
+    'L298N Motor Driver',
+    'DC Gear Motors',
+    'HC-SR04 Ultrasonic Sensor',
+    'Wi-Fi Access Point',
+    'Arduino WebServer',
+    'Embedded Systems',
+  ],
+  details: {
+    overview:
+      'A two-wheel-drive (2WD) robot car prototype using ESP32 as its main controller. The project explores wireless motor control through a web interface hosted by the ESP32 and basic obstacle detection using an HC-SR04 ultrasonic sensor.',
+    problem:
+      'Controlling a robot car wirelessly requires communication between the controller and motor driver, while obstacle detection requires sensor input to help the car respond to nearby objects.',
+    objectives: [
+      'Build a basic 2WD robot car using ESP32',
+      'Control two DC motors through an L298N motor driver',
+      'Create a web interface for wireless car movement',
+      'Use ESP32 Wi-Fi Access Point for local communication',
+      'Understand ultrasonic distance measurement for obstacle detection',
+      'Learn basic IoT hardware connections and programming',
+    ],
+    features: [
+      'Wireless car control through a web interface',
+      'Forward, backward, left, right, and stop controls',
+      'ESP32 Wi-Fi Access Point connection',
+      'Basic obstacle detection using HC-SR04',
+      'Automatic movement mode for obstacle avoidance',
+      'Dual DC motor control using L298N',
+    ],
+    role:
+      'Hardware and programming developer — assembled the ESP32, motor driver, DC motors, and ultrasonic sensor, and developed the Arduino code for Wi-Fi-based car control and basic obstacle detection.',
+    process: [
+      'Preparing the ESP32 board, L298N motor driver, DC motors, and ultrasonic sensor',
+      'Connecting the ESP32 GPIO pins to the motor driver',
+      'Setting up the power supply and common ground connections',
+      'Writing Arduino code to control motor direction and speed',
+      'Configuring ESP32 as a Wi-Fi Access Point',
+      'Creating a simple web interface for remote car control',
+      'Connecting the HC-SR04 sensor to measure nearby object distances',
+      'Testing wireless controls and basic obstacle detection',
+    ],
+    screenshots: [
+      {
+        src: '/images/esp32-car.jpeg',
+        caption: 'ESP32 Wi-Fi controlled robot car prototype',
+      },
+      {
+        src: '/images/esp32-car-wiring.jpg',
+        caption: 'ESP32, L298N motor driver, and sensor connections',
+      },
+      {
+        src: '/images/esp32-car-web.jpg',
+        caption: 'Web interface for wireless robot car control',
+      },
+    ],
+    challenges: [
+      {
+        challenge:
+          'The ESP32 Wi-Fi connection became unstable when powered through the motor driver module using the battery supply.',
+        solution:
+          'Checked the power connections, battery supply, and common ground configuration to understand the power requirements of the ESP32 and motors.',
+      },
+      {
+        challenge:
+          'Controlling two DC motors required proper GPIO configuration and motor driver connections.',
+        solution:
+          'Configured separate GPIO pins for motor direction and PWM speed control, then tested each motor individually.',
+      },
+      {
+        challenge:
+          'The ultrasonic sensor required suitable signal connections to the ESP32.',
+        solution:
+          'Configured separate trigger and echo pins and considered voltage level adjustment for the sensor output.',
+      },
+    ],
+    results: [
+      'Built a basic 2WD robot car prototype using ESP32.',
+      'Implemented wireless movement control through a local web interface.',
+      'Explored Wi-Fi Access Point communication and web server functionality.',
+      'Practiced DC motor control, ultrasonic sensing, and basic obstacle avoidance.',
+      'Gained practical experience with IoT components, circuit wiring, and power management.',
+    ],
+    repo: null,
+    demo: null,
+  },
+},
   
 {
   id: 'arduino-4dof-robotic-arm',
