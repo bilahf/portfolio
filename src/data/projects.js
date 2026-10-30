@@ -75,20 +75,7 @@ export const projects = [
       'Connecting the HC-SR04 sensor to measure nearby object distances',
       'Testing wireless controls and basic obstacle detection',
     ],
-    screenshots: [
-      {
-        src: '/images/esp32-car.jpeg',
-        caption: 'ESP32 Wi-Fi controlled robot car prototype',
-      },
-      {
-        src: '/images/esp32-car-wiring.jpg',
-        caption: 'ESP32, L298N motor driver, and sensor connections',
-      },
-      {
-        src: '/images/esp32-car-web.jpg',
-        caption: 'Web interface for wireless robot car control',
-      },
-    ],
+    
     challenges: [
       {
         challenge:
@@ -122,10 +109,83 @@ export const projects = [
 },
 
 {
+    id: 'probing-monitoring',
+    title: 'Mobile Monitoring System for Probing Operations',
+    category: 'software',
+    thumbnail: '/images/prob.jpg',
+    shortDescription:
+      'A mobile monitoring system developed during an internship to support PLN probing operations through centralized customer data management, field activity monitoring, and automated data synchronization.',
+    tech: [
+      'Flutter',
+      'PHP REST API',
+      'MySQL',
+      'JWT',
+      'Google Apps Script',
+      'Google Sheets',
+      'Google Maps',
+    ],
+    details: {
+      overview:
+        'A mobile application developed to help field officers manage probing activities and customer information. The system connects a Flutter frontend with a PHP REST API and MySQL database, with additional integration for Google Sheets synchronization.',
+      problem:
+        'Customer probing data collected through manual processes can be difficult to monitor, consolidate, and recap. Field teams need a more centralized way to manage customer records and track the results of probing activities.',
+      objectives: [
+        'Centralize customer probing data in one application',
+        'Simplify field activity monitoring and customer status updates',
+        'Reduce repetitive manual data entry and recap work',
+        'Support operational reporting through spreadsheet synchronization',
+      ],
+      features: [
+        'Customer data creation, viewing, updating, and management',
+        'JWT-based authentication',
+        'Customer status tracking for willing, unwilling, and not-found results',
+        'Monitoring dashboard for probing activities',
+        'Google Maps integration for location support',
+        'Activity history and status tracking',
+        'Automated synchronization with Google Sheets',
+      ],
+      role:
+        'Mobile application developer intern — developed the Flutter interface, integrated the PHP REST API, and supported customer data management and synchronization workflows.',
+      process: [
+        'Identifying the operational needs of the probing process',
+        'Designing mobile screens and customer data workflows',
+        'Connecting the Flutter application to the PHP REST API',
+        'Integrating application data with MySQL',
+        'Implementing customer status tracking and map functionality',
+        'Configuring Google Apps Script and Google Sheets synchronization',
+        'Testing application workflows and data consistency',
+      ],
+      
+      challenges: [
+        {
+          challenge:
+            'Keeping customer records consistent between the mobile application, backend database, and spreadsheet recap.',
+          solution:
+            'Used a PHP REST API connected to MySQL for application data and configured Google Apps Script to synchronize relevant records with Google Sheets.',
+        },
+        {
+          challenge:
+            'Making field probing results easier to identify and monitor.',
+          solution:
+            'Organized customer records using distinct probing status categories and provided a centralized interface for monitoring activities.',
+        },
+      ],
+      results: [
+        'Provided a centralized mobile interface for managing more than 500 customer records.',
+        'Supported probing activity monitoring across four ULP areas in Gresik.',
+        'Reduced dependence on separate manual forms and spreadsheet recaps.',
+        'Connected mobile data management with automated Google Sheets synchronization.',
+      ],
+      repo: 'https://github.com/bilahf/probing',
+      demo: null,
+    },
+  },
+
+{
   id: 'laravel-13-pos-inventory',
   title: 'Point of Sale (POS) & Inventory Management System',
   category: 'web',
-  thumbnail: '/images/pos.png',
+  thumbnail: '/images/kasir.jpg',
   shortDescription:
     'A web-based Point of Sale and Inventory Management System built with Laravel 13, featuring product management, cashier transactions, shopping cart, checkout, transaction history, and automatic stock management. Deployed using Docker, Nginx, and VPS with a custom domain and HTTPS.',
 
@@ -203,24 +263,7 @@ export const projects = [
       'Testing application access through the custom domain with HTTPS',
     ],
 
-    screenshots: [
-      {
-        src: '/images/pos.jpg',
-        caption: 'POS application dashboard',
-      },
-      {
-        src: '/images/pos-products.jpg',
-        caption: 'Product and category management',
-      },
-      {
-        src: '/images/pos-cashier.jpg',
-        caption: 'Cashier transaction and shopping cart interface',
-      },
-      {
-        src: '/images/pos-inventory.jpg',
-        caption: 'Inventory and stock management',
-      },
-    ],
+    
 
     challenges: [
       {
@@ -320,20 +363,7 @@ export const projects = [
       'Implementing HTTP endpoints to receive color and power commands',
       'Testing wireless LED control through a mobile or desktop browser',
     ],
-    screenshots: [
-      {
-        src: '/images/rgb-led.jpg',
-        caption: 'ESP32 and RGB LED hardware setup',
-      },
-      {
-        src: '/images/rgb-led-wiring.jpg',
-        caption: 'RGB LED connections to ESP32 GPIO pins',
-      },
-      {
-        src: '/images/rgb-led-web.jpg',
-        caption: 'Web interface for RGB LED color and power control',
-      },
-    ],
+    
     challenges: [
       {
         challenge:
@@ -411,20 +441,7 @@ export const projects = [
       'Checking power supply requirements and common ground connections',
       'Adjusting the control logic based on movement tests',
     ],
-    screenshots: [
-      {
-        src: '/images/robotic-arm.jpg',
-        caption: 'Arduino 4-DOF robotic arm prototype',
-      },
-      {
-        src: '/images/robotic-arm-wiring.jpg',
-        caption: 'Servo wiring and Arduino connections',
-      },
-      {
-        src: '/images/robotic-arm-control.jpg',
-        caption: 'Joystick-based robotic arm control',
-      },
-    ],
+    
     challenges: [
       {
         challenge:
@@ -449,97 +466,7 @@ export const projects = [
   },
 },
 
-  {
-    id: 'probing-monitoring',
-    title: 'Mobile Monitoring System for Probing Operations',
-    category: 'software',
-    thumbnail: '/images/prob.jpg',
-    shortDescription:
-      'A mobile monitoring system developed during an internship to support PLN probing operations through centralized customer data management, field activity monitoring, and automated data synchronization.',
-    tech: [
-      'Flutter',
-      'PHP REST API',
-      'MySQL',
-      'JWT',
-      'Google Apps Script',
-      'Google Sheets',
-      'Google Maps',
-    ],
-    details: {
-      overview:
-        'A mobile application developed to help field officers manage probing activities and customer information. The system connects a Flutter frontend with a PHP REST API and MySQL database, with additional integration for Google Sheets synchronization.',
-      problem:
-        'Customer probing data collected through manual processes can be difficult to monitor, consolidate, and recap. Field teams need a more centralized way to manage customer records and track the results of probing activities.',
-      objectives: [
-        'Centralize customer probing data in one application',
-        'Simplify field activity monitoring and customer status updates',
-        'Reduce repetitive manual data entry and recap work',
-        'Support operational reporting through spreadsheet synchronization',
-      ],
-      features: [
-        'Customer data creation, viewing, updating, and management',
-        'JWT-based authentication',
-        'Customer status tracking for willing, unwilling, and not-found results',
-        'Monitoring dashboard for probing activities',
-        'Google Maps integration for location support',
-        'Activity history and status tracking',
-        'Automated synchronization with Google Sheets',
-      ],
-      role:
-        'Mobile application developer intern — developed the Flutter interface, integrated the PHP REST API, and supported customer data management and synchronization workflows.',
-      process: [
-        'Identifying the operational needs of the probing process',
-        'Designing mobile screens and customer data workflows',
-        'Connecting the Flutter application to the PHP REST API',
-        'Integrating application data with MySQL',
-        'Implementing customer status tracking and map functionality',
-        'Configuring Google Apps Script and Google Sheets synchronization',
-        'Testing application workflows and data consistency',
-      ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'mobile application dashboard for field customer probing operations, customer statistics cards, blue and white enterprise UI, realistic Android app screenshot'
-          ),
-          caption: 'Probing monitoring dashboard',
-        },
-        {
-          src: imageUrl(
-            'Android mobile application displaying a searchable list of customer records with willing unwilling and not found status labels, clean blue and white interface'
-          ),
-          caption: 'Customer records and probing status',
-        },
-        {
-          src: imageUrl(
-            'mobile field monitoring application showing customer location information on an integrated map, clean enterprise interface, realistic Android screenshot'
-          ),
-          caption: 'Customer location support',
-        },
-      ],
-      challenges: [
-        {
-          challenge:
-            'Keeping customer records consistent between the mobile application, backend database, and spreadsheet recap.',
-          solution:
-            'Used a PHP REST API connected to MySQL for application data and configured Google Apps Script to synchronize relevant records with Google Sheets.',
-        },
-        {
-          challenge:
-            'Making field probing results easier to identify and monitor.',
-          solution:
-            'Organized customer records using distinct probing status categories and provided a centralized interface for monitoring activities.',
-        },
-      ],
-      results: [
-        'Provided a centralized mobile interface for managing more than 500 customer records.',
-        'Supported probing activity monitoring across four ULP areas in Gresik.',
-        'Reduced dependence on separate manual forms and spreadsheet recaps.',
-        'Connected mobile data management with automated Google Sheets synchronization.',
-      ],
-      repo: 'https://github.com/bilahf/probing',
-      demo: null,
-    },
-  },
+  
 
 
   {
@@ -610,24 +537,7 @@ export const projects = [
       'Testing the complete workflow from content generation to video storage',
     ],
 
-    screenshots: [
-      {
-        src: '/images/ai-video.png',
-        caption: 'Automated AI video generation workflow',
-      },
-      {
-        src: '/images/ai-video-workflow.png',
-        caption: 'Multi-agent workflow orchestration in n8n',
-      },
-      {
-        src: '/images/ai-video-output.png',
-        caption: 'Generated before-and-after video output',
-      },
-      {
-        src: '/images/ai-video-sheets.png',
-        caption: 'Google Sheets integration for data logging',
-      },
-    ],
+    
 
     challenges: [
       {
@@ -783,20 +693,7 @@ export const projects = [
         'Integrating workflow outputs with Google Sheets where required',
         'Testing workflow execution and handling unsuccessful requests',
       ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'n8n workflow editor with connected trigger HTTP request AI agent conditional logic and Google Sheets nodes, realistic workflow automation interface, readable node connections'
-          ),
-          caption: 'AI workflow automation',
-        },
-        {
-          src: imageUrl(
-            'workflow execution results showing structured JSON data passing through connected automation nodes, clean developer tool interface, realistic software screenshot'
-          ),
-          caption: 'Data processing workflow',
-        },
-      ],
+      
       challenges: [
         {
           challenge:
@@ -868,20 +765,7 @@ export const projects = [
         'Displaying historical data and forecasting results',
         'Comparing forecast outputs against actual consumption values',
       ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'Laravel electricity consumption forecasting dashboard with monthly industrial energy usage table and statistical summary cards, clean blue and white web interface'
-          ),
-          caption: 'Electricity consumption dashboard',
-        },
-        {
-          src: imageUrl(
-            'time series forecasting result page with historical electricity consumption and forecast line chart, actual versus predicted values and error metrics, professional analytics interface'
-          ),
-          caption: 'Forecasting results and evaluation',
-        },
-      ],
+      
       challenges: [
         {
           challenge:
@@ -953,20 +837,7 @@ export const projects = [
         'Organizing dashboard elements into a clear report layout',
         'Checking the consistency of displayed metrics',
       ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'Power BI mortgage trading profitability report with revenue gross profit and margin KPI cards, interactive bar charts and pricing analysis, clean corporate dashboard screenshot'
-          ),
-          caption: 'Profitability overview',
-        },
-        {
-          src: imageUrl(
-            'Power BI business intelligence report showing pricing driver analysis, profitability comparisons and interactive filters, professional financial analytics dashboard'
-          ),
-          caption: 'Pricing and performance analysis',
-        },
-      ],
+      
       challenges: [
         {
           challenge:
@@ -1037,26 +908,7 @@ export const projects = [
         'Configuring Cloud Storage for media assets',
         'Testing access to the deployed web page and media URLs',
       ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'Google Cloud Console Compute Engine virtual machine details page showing a running Linux instance, professional cloud infrastructure interface'
-          ),
-          caption: 'Compute Engine configuration',
-        },
-        {
-          src: imageUrl(
-            'simple deployed media website hosted on an Apache Linux server with image and video content, clean browser view and minimal web design'
-          ),
-          caption: 'Deployed media web page',
-        },
-        {
-          src: imageUrl(
-            'Google Cloud Storage bucket interface showing organized media files and object details, realistic cloud console screenshot'
-          ),
-          caption: 'Cloud Storage media assets',
-        },
-      ],
+      
       challenges: [
         {
           challenge:
