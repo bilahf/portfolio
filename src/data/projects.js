@@ -711,20 +711,7 @@ export const projects = [
         'Implementing the article listing and browsing interface',
         'Testing API responses and mobile screen behavior',
       ],
-      screenshots: [
-        {
-          src: imageUrl(
-            'Android news application home screen with top headlines, editorial thumbnails, article titles, white background and clean modern Jetpack Compose UI'
-          ),
-          caption: 'Daily news home screen',
-        },
-        {
-          src: imageUrl(
-            'native Android news app showing a vertically scrollable list of news articles with thumbnails, headlines and short descriptions, minimalist interface'
-          ),
-          caption: 'News article listing',
-        },
-      ],
+      
       challenges: [
         {
           challenge:
