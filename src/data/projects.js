@@ -120,7 +120,252 @@ export const projects = [
     demo: null,
   },
 },
+
+{
+  id: 'laravel-13-pos-inventory',
+  title: 'Point of Sale (POS) & Inventory Management System',
+  category: 'web',
+  thumbnail: '/images/pos.png',
+  shortDescription:
+    'A web-based Point of Sale and Inventory Management System built with Laravel 13, featuring product management, cashier transactions, shopping cart, checkout, transaction history, and automatic stock management. Deployed using Docker, Nginx, and VPS with a custom domain and HTTPS.',
+
+  tech: [
+    'Laravel 13',
+    'PHP 8.4',
+    'MySQL',
+    'Blade',
+    'Tailwind CSS',
+    'Vite',
+    'Laravel Breeze',
+    'Docker',
+    'Docker Compose',
+    'Nginx',
+    'Git',
+    'GitHub',
+    'VPS (Debian)',
+    'Domain & DNS',
+    'HTTPS/SSL',
+    "Let's Encrypt",
+  ],
+
+  details: {
+    overview:
+      'A web-based Point of Sale (POS) and Inventory Management System developed using Laravel 13. The application supports daily sales operations, including product and category management, cashier transactions, shopping cart, checkout, transaction history, and automatic inventory updates. The application is containerized using Docker and deployed to a VPS with Nginx as the web server, a custom domain, and HTTPS.',
+
+    problem:
+      'Manual sales and inventory management can make it difficult to track transactions and monitor product stock. A web-based POS system provides a centralized application to manage products, record sales, and monitor inventory more efficiently.',
+
+    objectives: [
+      'Develop a web-based POS application using Laravel 13',
+      'Understand Laravel application development and database integration',
+      'Implement product and category management',
+      'Build cashier transaction and checkout functionality',
+      'Implement inventory management and stock validation',
+      'Understand Docker containerization and Docker Compose',
+      'Configure Nginx as a web server for Laravel',
+      'Deploy and manage the application on a VPS',
+      'Connect a custom domain through DNS configuration',
+      'Implement HTTPS/SSL using Let’s Encrypt',
+      'Manage source code using Git and GitHub',
+    ],
+
+    features: [
+      'User authentication',
+      'Product management',
+      'Product category management',
+      'Cashier transaction management',
+      'Shopping cart functionality',
+      'Checkout and transaction recording',
+      'Transaction history',
+      'Inventory and stock management',
+      'Stock validation before checkout',
+      'Automatic stock deduction after transactions',
+      'Responsive dashboard and user interface',
+    ],
+
+    role:
+      'Full-Stack Developer — developed the POS and inventory management features using Laravel 13, Blade, Tailwind CSS, and MySQL. Also handled Docker configuration, Nginx setup, VPS deployment, domain configuration, and HTTPS implementation.',
+
+    process: [
+      'Setting up the Laravel 13 development environment',
+      'Configuring MySQL database and application environment',
+      'Developing product and category management features',
+      'Implementing authentication and cashier transaction functionality',
+      'Developing shopping cart, checkout, and transaction history',
+      'Implementing inventory management with stock validation and automatic stock deduction',
+      'Building frontend assets using Vite and Tailwind CSS',
+      'Configuring Docker and Docker Compose for application containerization',
+      'Setting up separate containers for Laravel/PHP, MySQL, and Nginx',
+      'Configuring Nginx to serve the Laravel application through PHP-FPM',
+      'Preparing a Debian VPS and deploying the application using GitHub',
+      'Configuring the custom domain and DNS records to point to the VPS IP address',
+      'Installing HTTPS/SSL certificates using Let’s Encrypt',
+      'Testing application access through the custom domain with HTTPS',
+    ],
+
+    screenshots: [
+      {
+        src: '/images/pos.jpg',
+        caption: 'POS application dashboard',
+      },
+      {
+        src: '/images/pos-products.jpg',
+        caption: 'Product and category management',
+      },
+      {
+        src: '/images/pos-cashier.jpg',
+        caption: 'Cashier transaction and shopping cart interface',
+      },
+      {
+        src: '/images/pos-inventory.jpg',
+        caption: 'Inventory and stock management',
+      },
+    ],
+
+    challenges: [
+      {
+        challenge:
+          'Configuring Laravel to connect to the MySQL database running in a separate Docker container.',
+        solution:
+          'Configured Docker Compose networking and database environment variables to allow Laravel to communicate with the MySQL service.',
+      },
+      {
+        challenge:
+          'Laravel could not initially access the generated Vite build assets inside the Docker container.',
+        solution:
+          'Built the frontend assets using Vite and configured a Docker volume to make the generated public/build directory accessible to the Laravel application.',
+      },
+      {
+        challenge:
+          'Configuring Nginx to serve the Laravel application through PHP-FPM containers.',
+        solution:
+          'Configured Nginx server settings, document root, request routing, and FastCGI connection to the Laravel PHP-FPM service.',
+      },
+      {
+        challenge:
+          'Connecting the custom domain to the VPS and enabling secure HTTPS access.',
+        solution:
+          'Configured DNS A records to point the domain to the VPS IP address and installed SSL certificates using Let’s Encrypt.',
+      },
+    ],
+
+    results: [
+      'Developed a functional web-based POS and inventory management application.',
+      'Implemented product management, cashier transactions, and automatic stock updates.',
+      'Containerized the application using Docker and Docker Compose.',
+      'Deployed the application to a Debian-based VPS with Nginx and MySQL.',
+      'Successfully connected the application to a custom domain.',
+      'Enabled secure HTTPS access using Let’s Encrypt SSL certificates.',
+      'Practiced Git and GitHub for source code management and deployment.',
+    ],
+
+    repo: null,
+    demo: null,
+  },
+},
   
+{
+  id: 'esp32-rgb-led-web-control',
+  title: 'ESP32 RGB LED Web Control',
+  category: 'iot',
+  thumbnail: '/images/led.jpg',
+  shortDescription:
+    'An RGB LED control system built with ESP32, allowing users to select LED colors and control power through a simple web interface connected via Wi-Fi Access Point.',
+  tech: [
+    'ESP32',
+    'Arduino IDE',
+    'RGB LED',
+    'PWM Control',
+    'Wi-Fi Access Point',
+    'Arduino WebServer',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'HTTP Communication',
+    'Embedded Systems',
+  ],
+  details: {
+    overview:
+      'A simple IoT project using ESP32 to control an RGB LED through a web interface. ESP32 acts as a Wi-Fi Access Point and hosts a local web server, allowing users to select colors and turn the LED on or off directly from a browser.',
+    problem:
+      'Controlling LED colors manually requires direct interaction with hardware connections. A web-based control system provides a simpler way to change colors and manage LED power wirelessly.',
+    objectives: [
+      'Understand basic ESP32 programming using Arduino IDE',
+      'Control RGB LED colors through ESP32 GPIO pins',
+      'Learn basic PWM control for RGB LED color output',
+      'Configure ESP32 as a Wi-Fi Access Point',
+      'Create a simple web interface using HTML, CSS, and JavaScript',
+      'Understand basic HTTP communication between a browser and ESP32',
+      'Explore basic IoT hardware and software integration',
+    ],
+    features: [
+      'Web-based RGB LED color control',
+      'Red, green, and blue color selection',
+      'Custom color selection using a color picker',
+      'LED ON and OFF controls',
+      'Local Wi-Fi Access Point connection',
+      'HTTP request handling through ESP32 WebServer',
+      'Real-time LED color changes through browser interaction',
+    ],
+    role:
+      'Hardware and programming developer — assembled the ESP32 and RGB LED circuit, configured GPIO and PWM control, and developed a simple web interface for wireless LED color and power control.',
+    process: [
+      'Preparing the ESP32 board, expansion board, RGB LED, and resistors',
+      'Connecting the RGB LED channels to ESP32 GPIO pins 21, 22, and 23',
+      'Setting up the common ground connection',
+      'Writing Arduino code for RGB LED control using PWM',
+      'Configuring ESP32 as a Wi-Fi Access Point',
+      'Setting up a local web server using the Arduino WebServer library',
+      'Creating an HTML, CSS, and JavaScript interface for LED control',
+      'Implementing HTTP endpoints to receive color and power commands',
+      'Testing wireless LED control through a mobile or desktop browser',
+    ],
+    screenshots: [
+      {
+        src: '/images/rgb-led.jpg',
+        caption: 'ESP32 and RGB LED hardware setup',
+      },
+      {
+        src: '/images/rgb-led-wiring.jpg',
+        caption: 'RGB LED connections to ESP32 GPIO pins',
+      },
+      {
+        src: '/images/rgb-led-web.jpg',
+        caption: 'Web interface for RGB LED color and power control',
+      },
+    ],
+    challenges: [
+      {
+        challenge:
+          'The RGB LED did not initially respond to the ESP32 GPIO output.',
+        solution:
+          'Reviewed the LED wiring, GPIO connections, common pin configuration, and LED type to identify possible circuit issues.',
+      },
+      {
+        challenge:
+          'The LED PWM code was incompatible with the installed ESP32 Arduino Core version.',
+        solution:
+          'Adjusted the PWM configuration to use ledcSetup(), ledcAttachPin(), and ledcWrite() for compatibility with ESP32 Core 2.x.',
+      },
+      {
+        challenge:
+          'Uploading the program sometimes required manually entering ESP32 download mode.',
+        solution:
+          'Used the BOOT button during the upload connection process to help the ESP32 enter flash mode.',
+      },
+    ],
+    results: [
+      'Developed a basic web-based RGB LED control system using ESP32.',
+      'Implemented wireless communication through a local Wi-Fi Access Point.',
+      'Created a browser interface for color selection and LED power control.',
+      'Practiced basic HTTP request handling using the Arduino WebServer library.',
+      'Gained practical experience with GPIO, PWM, circuit wiring, and IoT fundamentals.',
+    ],
+    repo: null,
+    demo: null,
+  },
+},
+
 {
   id: 'arduino-4dof-robotic-arm',
   title: 'Arduino 4-DOF Robotic Arm',
@@ -295,6 +540,129 @@ export const projects = [
       demo: null,
     },
   },
+
+
+  {
+  id: 'n8n-ai-video-generation-pipeline',
+  title: 'AI Multi-Agent Video Generation Pipeline',
+  category: 'ai',
+  thumbnail: '/images/aivid.png',
+  shortDescription:
+    'An automated multi-agent video generation pipeline built with n8n, Gemini AI, and Qwen Tools, integrating the Wan 2.6 video generation model to generate content ideas, captions, structured prompts, and 5-second before-and-after videos. Integrated Google Sheets for data logging and Google Drive for automatic video storage.',
+
+  tech: [
+    'n8n',
+    'Gemini AI',
+    'Qwen Tools',
+    'Wan 2.6',
+    'AI Video Generation',
+    'Multi-Agent Workflow',
+    'Prompt Engineering',
+    'Google Sheets',
+    'Google Drive',
+    'API Integration',
+    'Workflow Automation',
+  ],
+
+  details: {
+    overview:
+      'An automated AI-powered video generation pipeline developed using n8n to coordinate multiple AI agents and tools. The workflow uses Gemini AI and Qwen Tools to generate content ideas, captions, and structured video prompts, which are then processed using the Wan 2.6 video generation model to create 5-second before-and-after videos. Google Sheets is integrated for recording workflow data, while Google Drive is used to automatically store the generated videos.',
+
+    problem:
+      'Creating short-form video content involves several repetitive steps, including generating ideas, writing captions, preparing prompts, generating videos, and organizing output files. Automating these tasks through an AI-powered workflow helps simplify the content creation process and reduce manual work.',
+
+    objectives: [
+      'Understand multi-agent workflow automation using n8n',
+      'Integrate Gemini AI for content idea and caption generation',
+      'Use Qwen Tools to support structured prompt generation',
+      'Integrate the Wan 2.6 model for AI video generation',
+      'Generate 5-second before-and-after videos',
+      'Automate the content creation workflow using multiple AI tools',
+      'Integrate Google Sheets for workflow data logging',
+      'Integrate Google Drive for automatic video storage',
+      'Understand API integration between AI services and automation tools',
+    ],
+
+    features: [
+      'Automated content idea generation',
+      'AI-generated captions',
+      'Structured video prompt generation',
+      'Multi-agent workflow orchestration',
+      'AI video generation using Wan 2.6',
+      '5-second before-and-after video generation',
+      'Automated workflow execution using n8n',
+      'Google Sheets integration for data logging',
+      'Automatic video storage in Google Drive',
+    ],
+
+    role:
+      'AI Automation Developer — designed and configured an automated multi-agent workflow using n8n, Gemini AI, and Qwen Tools. Integrated the Wan 2.6 video generation model and connected Google Sheets and Google Drive for data logging and automatic video storage.',
+
+    process: [
+      'Designing the automated workflow using n8n',
+      'Configuring multiple AI agents and workflow connections',
+      'Integrating Gemini AI for generating content ideas and captions',
+      'Using Qwen Tools to generate structured video prompts',
+      'Connecting the Wan 2.6 model for AI video generation',
+      'Generating 5-second before-and-after videos',
+      'Integrating Google Sheets to record generated content and workflow data',
+      'Configuring Google Drive for automatic video storage',
+      'Testing the complete workflow from content generation to video storage',
+    ],
+
+    screenshots: [
+      {
+        src: '/images/ai-video.png',
+        caption: 'Automated AI video generation workflow',
+      },
+      {
+        src: '/images/ai-video-workflow.png',
+        caption: 'Multi-agent workflow orchestration in n8n',
+      },
+      {
+        src: '/images/ai-video-output.png',
+        caption: 'Generated before-and-after video output',
+      },
+      {
+        src: '/images/ai-video-sheets.png',
+        caption: 'Google Sheets integration for data logging',
+      },
+    ],
+
+    challenges: [
+      {
+        challenge:
+          'Connecting multiple AI tools and coordinating their outputs within a single automated workflow.',
+        solution:
+          'Used n8n to organize workflow nodes and connect Gemini AI, Qwen Tools, and the Wan 2.6 video generation model.',
+      },
+      {
+        challenge:
+          'Preparing structured prompts that could be processed by the video generation model.',
+        solution:
+          'Integrated Qwen Tools to help generate structured prompts for the Wan 2.6 video generation process.',
+      },
+      {
+        challenge:
+          'Managing generated content and video files across different services.',
+        solution:
+          'Integrated Google Sheets for recording workflow data and Google Drive for automatically storing generated videos.',
+      },
+    ],
+
+    results: [
+      'Developed an automated multi-agent video generation pipeline using n8n.',
+      'Integrated Gemini AI and Qwen Tools for content and prompt generation.',
+      'Generated 5-second before-and-after videos using the Wan 2.6 model.',
+      'Automated content data logging through Google Sheets.',
+      'Implemented automatic video storage using Google Drive.',
+      'Practiced AI tool integration, API connections, and workflow automation.',
+    ],
+
+    repo: null,
+    demo: null,
+  },
+},
 
   {
     id: 'daily-news-mobile',
