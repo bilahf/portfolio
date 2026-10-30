@@ -39,4 +39,13 @@ export const awards = [
       'Ranked among the Top 100 participants in a SQL Hackathon focused on sales analysis and business insights.',
     image: '/images/srtf.png',
   },
+  {
+  id: 'award-4',
+  title: 'Excellent Performance - Mobile Developer Internship',
+  organization: 'Bank Mandiri',
+  year: '2026',
+  description:
+    'Received an Excellent performance rating with an average score of 80.05 in the Bank Mandiri Mobile Apps Developer Project-Based Internship Program.',
+  image: '/images/mandr.png',
+},
 ];

@@ -41,6 +41,74 @@ import { imageUrl } from './imageUrl'
  */
 
 export const certificates = [
+  
+{
+    id: 'cert-iot-fundamentals',
+
+    name: 'IoT Fundamentals & Practical Projects',
+
+    issuer: 'GUINEX Academy',
+
+    date: '2026',
+
+    
+description: {
+  en: 'Learned the fundamentals of IoT, basic electronics, Arduino programming, and ESP32 development. Gained basic knowledge of sensors, actuators, Wi-Fi connectivity, Access Point mode, web servers, and communication between devices.',
+  id: 'Mempelajari dasar-dasar IoT, elektronika, pemrograman Arduino, dan pengembangan ESP32. Memahami dasar penggunaan sensor, aktuator, konektivitas Wi-Fi, mode Access Point, web server, dan komunikasi antarperangkat.',
+},
+
+
+    tags: [
+      'IoT',
+      'Arduino',
+      'ESP32',
+      'C++',
+      'Wi-Fi Access Point',
+      'Web Server',
+      'HTTP',
+      'Robot Car 2WD',
+      'Motor Control',
+    ],
+
+    image: '/images/iot.png',
+
+    credentialUrl: '',
+},
+{
+    id: 'cert-laravel-13-deploy',
+
+    name: 'Laravel 13 for Web Developer Beginner & Deploy Docker VPS',
+
+    issuer: 'BuildWithAngga',
+
+    date: '2026',
+
+    description: {
+      en: 'Learned Laravel 13 web development by building a Point of Sale (POS) and Inventory Management System. Practiced application deployment using Docker and Docker Compose, Nginx as a web server, VPS server management, GitHub version control, custom domain and DNS configuration, and HTTPS/SSL implementation.',
+      id: 'Mempelajari pengembangan web menggunakan Laravel 13 melalui pembuatan aplikasi Point of Sale (POS) dan Inventory Management System. Mempraktikkan deployment aplikasi menggunakan Docker dan Docker Compose, konfigurasi Nginx sebagai web server, pengelolaan VPS, version control menggunakan GitHub, konfigurasi domain dan DNS, serta penerapan HTTPS/SSL.',
+    },
+
+    tags: [
+      'Laravel 13',
+      'PHP',
+      'MySQL',
+      'Blade',
+      'Tailwind CSS',
+      'Vite',
+      'Docker',
+      'Docker Compose',
+      'Nginx',
+      'VPS',
+      'GitHub',
+      'Domain & DNS',
+      'HTTPS/SSL',
+    ],
+
+    image: '/images/laravel-13.png',
+
+    credentialUrl: '',
+},
+
   {
     id: 'cert-servicenow-flows',
 
