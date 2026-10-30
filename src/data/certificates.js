@@ -104,7 +104,7 @@ description: {
       'HTTPS/SSL',
     ],
 
-    image: '/images/laravel-13.png',
+    image: '/images/laravel13.png',
 
     credentialUrl: '',
 },
