@@ -72,7 +72,7 @@ export const translations = {
       categories: {
         software: 'Software Development',
         ai: 'AI & Automation',
-        data: 'Data & Analytics',
+        
         iot: 'IoT & Robotics',
       },
       viewDetails: 'View Details',
@@ -202,7 +202,7 @@ export const translations = {
       categories: {
         software: 'Pengembangan Perangkat Lunak',
         ai: 'AI & Otomasi',
-        data: 'Data & Analitik',
+       
         iot: 'IoT & Robotika',
       },
       viewDetails: 'Lihat Detail',
