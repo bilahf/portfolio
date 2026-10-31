@@ -184,7 +184,7 @@ export const projects = [
 {
   id: 'laravel-13-pos-inventory',
   title: 'Point of Sale (POS) & Inventory Management System',
-  category: 'web',
+  category: 'software',
   thumbnail: '/images/kasir.jpg',
   shortDescription:
     'A web-based Point of Sale and Inventory Management System built with Laravel 13, featuring product management, cashier transactions, shopping cart, checkout, transaction history, and automatic stock management. Deployed using Docker, Nginx, and VPS with a custom domain and HTTPS.',

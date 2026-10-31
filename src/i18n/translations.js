@@ -70,8 +70,9 @@ export const translations = {
       filterLabel: 'Filter by category',
       filterAll: 'All',
       categories: {
-        software: 'Software Development',
+        software: 'Web/Mobile Development',
         ai: 'AI & Automation',
+        data: 'Data & Analytics',
         iot: 'IoT & Robotics',
       },
       viewDetails: 'View Details',
@@ -199,8 +200,9 @@ export const translations = {
       filterLabel: 'Filter berdasarkan kategori',
       filterAll: 'Semua',
       categories: {
-        software: 'Pengembangan Perangkat Lunak',
+        software: 'Pengembangan Perangkat Lunak Web/Mobile',
         ai: 'AI & Otomasi',
+        data: 'Data & Analitik',
         iot: 'IoT & Robotika',
       },
       viewDetails: 'Lihat Detail',
