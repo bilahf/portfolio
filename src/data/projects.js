@@ -721,7 +721,7 @@ export const projects = [
   {
     id: 'industrial-energy-forecasting',
     title: 'Industrial Energy Consumption Forecasting System',
-    category: 'data',
+    category: 'software, data',
     thumbnail:'/images/listr.jpg',
     shortDescription:
       'A web-based forecasting system developed as a final thesis project to analyze and predict industrial electricity consumption using historical PLN data and Fuzzy Time Series Cheng.',
