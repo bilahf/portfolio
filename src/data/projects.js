@@ -39,8 +39,8 @@ export const projects = [
 
       screenshots: [
       {
-        src: '/images/shot.png',
-        caption: 'Robot car prototype',
+        src: '/images/Shot.png',
+        caption: 'remote web control',
       },
       
     ],
