@@ -209,6 +209,14 @@ export const projects = [
         'Testing LED color and power control through a browser',
       ],
 
+      screenshots: [
+      {
+        src: '/images/sht.png',
+        caption: 'remote web control',
+      },
+      
+    ],
+
       challenges: [],
 
       results: [
