@@ -37,6 +37,14 @@ export const projects = [
         'Testing wireless movement and basic obstacle detection',
       ],
 
+      screenshots: [
+      {
+        src: '/images/shot.png',
+        caption: 'Robot car prototype',
+      },
+      
+    ],
+
       challenges: [],
 
       results: [
